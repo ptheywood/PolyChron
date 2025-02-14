@@ -6,53 +6,13 @@ Created on Sun Aug 15 17:43:25 2021
 @author: bryony
 """
 
-import os
-import pathlib
-import tkinter as tk
 from tkinter import ttk
-import copy
-import re
-import ast
-import matplotlib as plt
-from PIL import Image, ImageTk, ImageChops
-from networkx.drawing.nx_pydot import read_dot, write_dot
-import networkx as nx
-import pydot
-import numpy as np
-import pandas as pd
-from tkinter.filedialog import askopenfile
-from graphviz import render
-from . import automated_mcmc_ordering_coupling_copy as mcmc
 from ttkthemes import ThemedStyle
-import sys
-from matplotlib.figure import Figure
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
-import pickle
-from tkinter import simpledialog
 import tkinter.font as tkFont
-from tkinter.messagebox import askquestion
-import csv
 from importlib.metadata import version  # requires python >= 3.8
 import argparse
 
-from .globals import *
-from .StdoutRedirector import *
-from .Util import *
-from .popupWindow import *
-from .popupWindow2 import *
-from .popupWindow3 import *
-from .popupWindow4 import *
-from .popupWindow5 import *
-from .popupWindow6 import *
-from .popupWindow7 import *
-from .popupWindow8 import *
-from .popupWindow9 import *
-from .popupWindow10 import *
-from .load_Window import *
-from .MainFrame import *
-from .StartPage import *
-from .PageOne import *
-from .PageTwo import *
+from .MainFrame import MainFrame
 
 
 # Global scoping of MAIN_FRAME is currently required for state saving behaviour, prior to refactoring.

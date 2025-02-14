@@ -1,38 +1,23 @@
 import os
-import pathlib
 import tkinter as tk
 from tkinter import ttk
-import copy
-import re
-import ast
-import matplotlib as plt
-from PIL import Image, ImageTk, ImageChops
-from networkx.drawing.nx_pydot import read_dot, write_dot
+from PIL import Image, ImageTk
 import networkx as nx
 import pydot
 import numpy as np
 import pandas as pd
 from tkinter.filedialog import askopenfile
-from graphviz import render
 from . import automated_mcmc_ordering_coupling_copy as mcmc
-from ttkthemes import ThemedStyle
 import sys
-from matplotlib.figure import Figure
-from matplotlib.backends.backend_tkagg import FigureCanvasTkAgg, NavigationToolbar2Tk
 import pickle
-from tkinter import simpledialog
-import tkinter.font as tkFont
 from tkinter.messagebox import askquestion
 import csv
-from importlib.metadata import version  # requires python >= 3.8
-import argparse
 
-from .globals import *
-from .Util import *
+from .globals import phase_true, load_check, mcmc_check, proj_dir, CALIBRATION, FILE_INPUT
+from .Util import clear_all, node_del_fixed, node_coords_fromjson, imagefunc, phase_labels, imgrender, imgrender2, imgrender_phase
 from .popupWindow import popupWindow
 from .popupWindow2 import popupWindow2
 from .popupWindow3 import popupWindow3
-from .popupWindow4 import popupWindow4
 from .popupWindow5 import popupWindow5
 from .popupWindow6 import popupWindow6
 from .popupWindow7 import popupWindow7
@@ -40,8 +25,8 @@ from .popupWindow8 import popupWindow8
 from .popupWindow9 import popupWindow9
 from .popupWindow10 import popupWindow10
 from .load_Window import load_Window
-from .PageOne import PageOne
 from .PageTwo import PageTwo
+from .StdoutRedirector import StdoutRedirector
 
 class StartPage(tk.Frame):
     """Main frame for tkinter app"""
